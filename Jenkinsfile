@@ -20,6 +20,7 @@ pipeline{
               
               '''
           }
+        }
       stage("pushto github"){
           steps{
               sh'''

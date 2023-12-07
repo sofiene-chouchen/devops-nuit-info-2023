@@ -17,6 +17,15 @@ pipeline{
               sh'''
               docker run ${IMAGE_NAME} -v /var/jenkins_home/data:/app
               
+              
+              '''
+          }
+      stage("pushto github"){
+          steps{
+              sh'''
+              git push origin main
+              
+              
               '''
           }
           

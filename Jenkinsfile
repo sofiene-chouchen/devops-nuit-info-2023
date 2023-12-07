@@ -15,8 +15,8 @@ pipeline{
         stage("testtheimage"){
           steps{
               sh'''
-              docker run ${IMAGE_NAME} 
-              docker exec -it ${IMAGE_NAME} /bin/bash  
+              docker run ${IMAGE_NAME} -v /var/jenkins_home/data:/app
+              
               '''
           }
           

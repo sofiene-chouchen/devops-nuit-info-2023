@@ -14,7 +14,7 @@ pipeline{
         }
         stage("testtheimage"){
           steps{
-              sh '''docker images'''
+              sh '''docker run -it --rm ${IMAGE_NAME} /bin/bash'''
           }
           
 

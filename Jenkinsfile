@@ -12,6 +12,13 @@ pipeline{
               '''
             }
         }
+        stage("testtheimage"){
+          steps{
+              sh '''docker images'''
+          }
+          
+
+        }
       
     }
 }

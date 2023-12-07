@@ -2,7 +2,7 @@ pipeline{
     agent any
     environment{
         DOCKERHUB_CREDENTIALS = credentials('dh_cred')
-        IMAGE_NAME = "sofienech/express-project:v1"
+        IMAGE_NAME = "sofienech/express-project:v3"
     }
     stages{
         stage("pull-docker-image"){

@@ -24,7 +24,7 @@ pipeline{
       stage("pushto github"){
           steps{
               sh'''
-              git push origin main
+              git push -u origin main
               
               
               '''

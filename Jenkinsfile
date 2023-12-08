@@ -21,7 +21,7 @@ pipeline{
               docker rm poly
               docker run -d --name poly ${IMAGE_NAME} 
               mkdir /var/lib/jenkins/daTas
-              docker cp poly:/app/  /var/lib/jenkins/daTas/
+              docker cp poly:/app/  /var/lib/jenkins/daTass/
               docker stop poly
               
               '''
@@ -30,7 +30,7 @@ pipeline{
       stage("pushto github"){
           steps{
               sh'''
-              cd /var/lib/jenkins/daTas/
+              cd /var/lib/jenkins/daTass/
               git add .
               git commit -m "first commit"
               git push -u origin main

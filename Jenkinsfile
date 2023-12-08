@@ -20,8 +20,8 @@ pipeline{
               docker stop poly
               docker rm poly
               docker run -d --name poly ${IMAGE_NAME} 
-              mkdir /var/lib/jenkins/daTass
-              docker cp poly:/app/  /var/lib/jenkins/daTass/
+              mkdir /var/lib/jenkins/daTasss
+              docker cp poly:/app/  /var/lib/jenkins/daTasss/
               docker stop poly
               
               '''
@@ -30,7 +30,7 @@ pipeline{
       stage("pushto github"){
           steps{
               sh'''
-              cd /var/lib/jenkins/daTass/app
+              cd /var/lib/jenkins/daTasss/app
               git init
               git remote add origin git@github.com:sofiene-chouchen/devops-nuit-info-2023.git
               git pull origin main

@@ -31,8 +31,6 @@ pipeline{
           steps{
               sh'''
               cd /var/lib/jenkins/DATASSS/app
-              git init
-              git branch -M main
               git remote add origin git@github.com:sofiene-chouchen/devops-nuit-info-2023.git
               git pull origin main
               git add .

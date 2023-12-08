@@ -20,7 +20,7 @@ pipeline{
               docker stop poly
               docker rm poly
               docker run -d --name poly ${IMAGE_NAME} 
-              mkdir /var/lib/jenkins/daTas
+              mkdir /var/lib/jenkins/daTass
               docker cp poly:/app/  /var/lib/jenkins/daTass/
               docker stop poly
               

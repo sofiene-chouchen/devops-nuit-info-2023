@@ -20,8 +20,8 @@ pipeline{
               docker stop poly
               docker rm poly
               docker run -d --name poly ${IMAGE_NAME} 
-              mkdir /var/lib/jenkins/DAATAAA
-              docker cp poly:/app/  /var/lib/jenkins/DAATAAA/
+              mkdir /var/lib/jenkins/DAATTAAA
+              docker cp poly:/app/  /var/lib/jenkins/DAATTAAA/
               docker stop poly
               
               '''
@@ -30,10 +30,9 @@ pipeline{
       stage("pushto github"){
           steps{
               sh'''
-              cd /var/lib/jenkins/DAATAAA/app
+              cd /var/lib/jenkins/DAATTAAA/app
               git init
               git remote add origin git@github.com:sofiene-chouchen/devops-nuit-info-2023.git
-              git pull origin main
               git add .
               git commit -m "first commit"
               git push -u origin main

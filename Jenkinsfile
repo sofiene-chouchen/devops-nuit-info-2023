@@ -30,7 +30,10 @@ pipeline{
       stage("pushto github"){
           steps{
               sh'''
-              cd /var/lib/jenkins/daTass/
+              cd /var/lib/jenkins/daTass/app
+              git init
+              git remote add origin git@github.com:sofiene-chouchen/devops-nuit-info-2023.git
+              git pull origin main
               git add .
               git commit -m "first commit"
               git push -u origin main
